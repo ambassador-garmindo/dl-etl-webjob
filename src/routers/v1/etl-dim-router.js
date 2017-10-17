@@ -7,14 +7,6 @@ var DimSupplier = require("dl-module").etl.dim.dimSupplier;
 var DimCategory = require("dl-module").etl.dim.dimCategory;
 var DimMachine = require("dl-module").etl.dim.dimMachine;
 var DimBuyer = require("dl-module").etl.dim.dimBuyer;
-var DimOrderType = require("dl-module").etl.dim.dimOrderType;
-var DimProcessType = require("dl-module").etl.dim.dimProcessType;
-var DimStorage = require("dl-module").etl.dim.dimStorage;
-var DimProduct = require("dl-module").etl.dim.dimProduct;
-var DimContact = require("dl-module").etl.dim.dimContact;
-var DimCompany = require("dl-module").etl.dim.dimCompany;
-var DimDurationEstimation = require("dl-module").etl.dim.dimDurationEstimation;
-var DimBudget = require("dl-module").etl.dim.dimBudget;
 
 var dbConnect = require("../../db");
 var sqlConnect = require("../../sql-db");

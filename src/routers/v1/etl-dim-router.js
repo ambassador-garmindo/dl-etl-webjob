@@ -1,12 +1,7 @@
 var Router = require("restify-router").Router;
 var messageSender = require("../../message-sender");
-
-var DimUnit = require("dl-module").etl.dim.dimUnit;
 var DimDivision = require("dl-module").etl.dim.dimDivision;
 var DimSupplier = require("dl-module").etl.dim.dimSupplier;
-var DimCategory = require("dl-module").etl.dim.dimCategory;
-var DimMachine = require("dl-module").etl.dim.dimMachine;
-var DimBuyer = require("dl-module").etl.dim.dimBuyer;
 
 var dbConnect = require("../../db");
 var sqlConnect = require("../../sql-db");
@@ -39,22 +34,6 @@ function getRouter() {
                 var db = result[0];
                 var sql = result[1];
                 db.get().then((db) => {
-                    var instance1 = new DimUnit(db, {
-                        username: "unit-test"
-                    }, sql);
-
-                    instance1.run()
-                        .catch((e) => {
-                            done(e);
-                        });
-                });
-            });
-
-        Promise.all([dbConnect, sqlConnect])
-            .then((result) => {
-                var db = result[0];
-                var sql = result[1];
-                db.get().then((db) => {
                     var instance2 = new DimDivision(db, {
                         username: "unit-test"
                     }, sql);
@@ -76,182 +55,6 @@ function getRouter() {
                     }, sql);
 
                     instance3.run()
-                        .catch((e) => {
-                            done(e);
-                        });
-                });
-            });
-
-        Promise.all([dbConnect, sqlConnect])
-            .then((result) => {
-                var db = result[0];
-                var sql = result[1];
-                db.get().then((db) => {
-                    var instance4 = new DimCategory(db, {
-                        username: "unit-test"
-                    }, sql);
-
-                    instance4.run()
-                        .catch((e) => {
-                            done(e);
-                        });
-                });
-            });
-
-        Promise.all([dbConnect, sqlConnect])
-            .then((result) => {
-                var db = result[0];
-                var sql = result[1];
-                db.get().then((db) => {
-                    var instance5 = new DimMachine(db, {
-                        username: "unit-test"
-                    }, sql);
-
-                    instance5.run()
-                        .catch((e) => {
-                            done(e);
-                        });
-                });
-            });
-
-        Promise.all([dbConnect, sqlConnect])
-            .then((result) => {
-                var db = result[0];
-                var sql = result[1];
-                db.get().then((db) => {
-                    var instance6 = new DimBuyer(db, {
-                        username: "unit-test"
-                    }, sql);
-
-                    instance6.run()
-                        .catch((e) => {
-                            done(e);
-                        });
-                });
-            });
-
-        Promise.all([dbConnect, sqlConnect])
-            .then((result) => {
-                var db = result[0];
-                var sql = result[1];
-                db.get().then((db) => {
-                    var instance7 = new DimOrderType(db, {
-                        username: "unit-test"
-                    }, sql);
-
-                    instance7.run()
-                        .catch((e) => {
-                            done(e);
-                        });
-                });
-            });
-
-        Promise.all([dbConnect, sqlConnect])
-            .then((result) => {
-                var db = result[0];
-                var sql = result[1];
-                db.get().then((db) => {
-                    var instance8 = new DimProcessType(db, {
-                        username: "unit-test"
-                    }, sql);
-
-                    instance8.run()
-                        .catch((e) => {
-                            done(e);
-                        });
-                });
-            });
-
-        Promise.all([dbConnect, sqlConnect])
-            .then((result) => {
-                var db = result[0];
-                var sql = result[1];
-                db.get().then((db) => {
-                    var instance9 = new DimStorage(db, {
-                        username: "unit-test"
-                    }, sql);
-
-                    instance9.run()
-                        .catch((e) => {
-                            done(e);
-                        });
-                });
-            });
-
-        Promise.all([dbConnect, sqlConnect])
-            .then((result) => {
-                var db = result[0];
-                var sql = result[1];
-                db.get().then((db) => {
-                    var instance10 = new DimProduct(db, {
-                        username: "unit-test"
-                    }, sql);
-
-                    instance10.run()
-                        .catch((e) => {
-                            done(e);
-                        });
-                });
-            });
-
-        Promise.all([dbConnect, sqlConnect])
-            .then((result) => {
-                var db = result[0];
-                var sql = result[1];
-                db.get().then((db) => {
-                    var instance11 = new DimContact(db, {
-                        username: "unit-test"
-                    }, sql);
-
-                    instance11.run()
-                        .catch((e) => {
-                            done(e);
-                        });
-                });
-            });
-
-        Promise.all([dbConnect, sqlConnect])
-            .then((result) => {
-                var db = result[0];
-                var sql = result[1];
-                db.get().then((db) => {
-                    var instance12 = new DimCompany(db, {
-                        username: "unit-test"
-                    }, sql);
-
-                    instance12.run()
-                        .catch((e) => {
-                            done(e);
-                        });
-                });
-            });
-
-        Promise.all([dbConnect, sqlConnect])
-            .then((result) => {
-                var db = result[0];
-                var sql = result[1];
-                db.get().then((db) => {
-                    var instance13 = new DimDurationEstimation(db, {
-                        username: "unit-test"
-                    }, sql);
-
-                    instance13.run()
-                        .catch((e) => {
-                            done(e);
-                        });
-                });
-            });
-
-        Promise.all([dbConnect, sqlConnect])
-            .then((result) => {
-                var db = result[0];
-                var sql = result[1];
-                db.get().then((db) => {
-                    var instance14 = new DimBudget(db, {
-                        username: "unit-test"
-                    }, sql);
-
-                    instance14.run()
                         .catch((e) => {
                             done(e);
                         });

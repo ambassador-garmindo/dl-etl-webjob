@@ -1,7 +1,7 @@
 {
   "name": "dl-etl-webjob",
   "version": "1.0.0",
-  "description": "Dan Liris ETL azure webjob",
+  "description": "Ambassador Garmindo ETL azure webjob",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -13,17 +13,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/danliris/dl-etl-webjob.git"
+    "url": "git+https://github.com/ambassador-garmindo/dl-etl-webjob.git"
   },
   "author": "Moonlay Technology",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/danliris/dl-etl-webjob/issues"
+    "url": "https://github.com/ambassador-garmindo/dl-etl-webjob/issues"
   },
-  "homepage": "https://github.com/danliris/dl-etl-webjob#readme",
+  "homepage": "https://github.com/ambassador-garmindo/dl-etl-webjob#readme",
   "dependencies": {
     "azure": "^1.2.0-preview",
-    "dl-module": "git+https://github.com/danliris/dl-module.git#dev",
+    "dl-module": "git+https://github.com/ambassador-garmindo/dl-module.git#dev",
     "module-toolkit": "git+https://github.com/pinkgorilla/module-toolkit.git",
     "mssql": "^3.3.0",
     "restify": "^4.3.0",
